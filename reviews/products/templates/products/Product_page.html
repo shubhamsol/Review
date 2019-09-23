@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>=Product page</title>
+  <link href="https://fonts.googleapis.com/css?family=Oswald:400,600" rel="stylesheet"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="{% static 'products/Product_page.css'%}">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+  
+<!-- partial:index.partial.html -->
+<div class="container">
+<!--   https://www.jerecho.com/codepen/nike-product-page/ -->
+  <div class="product-image">
+      
+    <img src="{{image}}" alt="" class="product-pic">
+    
+  </div>
+  
+  <div class="product-details">
+    <header>
+      <h1 class="title">{{ title }}</h1>
+     
+      
+      <div class="rate">
+
+        {% if rating == 3 %}
+        <a href="#!" class="active">★</a>
+        <a href="#!" class="active">★</a>
+        <a href="#!" class="active">★</a>
+        <a href="#!">★</a>
+        <a href="#!">★</a>
+        {% endif %}
+
+        {% if rating == 4 %}
+        <a href="#!" class="active">★</a>
+        <a href="#!" class="active">★</a>
+        <a href="#!" class="active">★</a>
+        <a href="#!" class="active">★</a>
+        <a href="#!">★</a>
+        {% endif %}
+
+        
+      </div>
+
+
+    </header>
+    <article>
+      <h2>Review</h2>
+      <p>
+          {{review}}
+
+      </p>
+    </article>
+    
+    
+  </div>
+  
+</div>
+

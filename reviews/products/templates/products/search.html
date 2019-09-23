@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Search Box Design </title>
+	
+	<link rel="stylesheet" href="{% static 'products/search.css' %}">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+</head>
+<body>
+<div class="he">
+<h1>
+	Search Product {{ search }}
+</h1>	
+</div>
+
+<div class="wrapper">
+	<form>
+		
+		<input type="text" class="input" 
+		placeholder="Smart Phones, Laptops",value="{{ search }}" name="search_box">
+		<input type="submit" name="Search" class="searchbtn" href="product_page/" value="Click">
+
+	</form>
+	
+	
+</div>
+
+</body>
+</html>
